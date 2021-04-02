@@ -24,6 +24,7 @@ public class Minimarket {
 		
 		Person p = new Person(idType, id);
 		
+		increaseAttempt();
 		if (p.getIdType().equals(Type.TI)) {
 			
 			throw new NotOfLegalAgeException();
@@ -31,7 +32,7 @@ public class Minimarket {
 			if ((digit % 2 == 0 && date % 2 != 0) || (digit % 2 != 0 && date % 2 == 0)) {	
 				
 				allowed.add(p);
-				System.out.println("Registrado!");
+				System.out.println("Registrado!\n");
 			} else {
 				
 				throw new NotTheDayToGoOutException();

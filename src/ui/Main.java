@@ -61,7 +61,7 @@ public class Main {
 		// Tengo queb hacer un try catch en alguna parte uwu
 		// Con las exception que creemos
 		// Podríamos hacerlo en el model
-		mm.increaseAttempt();
+		//mm.increaseAttempt();
 		try {
 			mm.addAllowed(idType, id);
 		} catch (NotOfLegalAgeException | NotTheDayToGoOutException e) {

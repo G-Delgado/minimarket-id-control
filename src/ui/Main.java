@@ -42,6 +42,9 @@ public class Main {
 			case 0:
 				System.out.println("\nSaliendo...");
 				break;
+			default:
+				System.out.println("\nNo es una opción\n");
+				break;
 		}
 	}
 	
@@ -58,10 +61,6 @@ public class Main {
 		System.out.println("Ingresa tu documento (Ej. 12123910)\n");
 		id = in.nextLine();
 		
-		// Tengo queb hacer un try catch en alguna parte uwu
-		// Con las exception que creemos
-		// Podríamos hacerlo en el model
-		//mm.increaseAttempt();
 		try {
 			mm.addAllowed(idType, id);
 		} catch (NotOfLegalAgeException | NotTheDayToGoOutException e) {

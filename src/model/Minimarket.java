@@ -27,7 +27,7 @@ public class Minimarket {
 		increaseAttempt();
 		if (p.getIdType().equals(Type.TI)) {
 			
-			throw new NotOfLegalAgeException();
+			throw new NotOfLegalAgeException("People below 18 years old can't pass\n");
 		} else {
 			if ((digit % 2 == 0 && date % 2 != 0) || (digit % 2 != 0 && date % 2 == 0)) {	
 				
@@ -35,7 +35,7 @@ public class Minimarket {
 				System.out.println("Registrado!\n");
 			} else {
 				
-				throw new NotTheDayToGoOutException();
+				throw new NotTheDayToGoOutException("The id " + p.getId() + " doesn't works for this day\n");
 			}
 		}
 		

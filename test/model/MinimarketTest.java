@@ -60,6 +60,7 @@ public class MinimarketTest {
 		scenaryTwo();
 		try {
 			mm.addAllowed("TI", id);
+			fail();
 		} catch (NotOfLegalAgeException | NotTheDayToGoOutException e) {
 			assertEquals(mm.getAttempt(), 1);
 			assertEquals(mm.getAllowed().size(), 0);
@@ -69,10 +70,11 @@ public class MinimarketTest {
 	}
 	
 	@Test
-	public void testProhibitedDay() {
+	public void testForbiddendDay() {
 		scenaryThree();
 		try {
 			mm.addAllowed("CE", id);
+			fail();
 		} catch (NotOfLegalAgeException | NotTheDayToGoOutException e) {
 			assertEquals(mm.getAttempt(), 1);
 			assertEquals(mm.getAllowed().size(), 0);
